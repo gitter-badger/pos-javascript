@@ -32,7 +32,6 @@ var CartItem = (function () {
 
   CartItem.prototype.toString = function () {
     var item = this.item;
-    //名称：可口可乐350ml，数量：20瓶，单价：3.00(元)，小计：60.00(元)\n
     return '名称：' + item.getName() + '，数量：' + this.count
       + item.getUtil() + '，单价：' + item.getPrice().toFixed(2) + '(元)，小计：'
       + this.calculateTotal().toFixed(2) + '(元)\n';
