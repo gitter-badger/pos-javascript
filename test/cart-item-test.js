@@ -30,6 +30,13 @@ describe('cart-item', function () {
 
             Item.findItemByBarcode.restore();
         });
+    });
 
+    describe('.getTotal', function () {
+      it('total without promotion', function () {
+        var item = new Item('ITEM000000', '可口可乐350ml', '瓶', 3.00, '可口可乐');
+        var cartItem = new CartItem(item, 3);
+        assert.equal(cartItem.calculateTotal(), 9.00);
+      });
     });
 });

@@ -26,6 +26,9 @@ var CartItem = (function () {
     return cartItem;
   };
 
+  CartItem.prototype.calculateTotal = function () {
+      return this.item.price * this.count;
+  };
 
   return CartItem;
 })();
