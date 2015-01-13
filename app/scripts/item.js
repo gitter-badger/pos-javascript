@@ -14,6 +14,23 @@ var Item = (function () {
     Item.findItemByBarcode = function (items, barcode) {
         return _.find(items, {'barcode': barcode});
     };
+
+    Item.prototype.getName = function () {
+      return this.name;
+    };
+
+    Item.prototype.getUtil = function () {
+      return this.util;
+    };
+
+    Item.prototype.getPrice = function () {
+      return this.price;
+    };
+
+    Item.prototype.getBrand = function () {
+      return this.brand;
+    };
+
     return Item;
 })();
 
