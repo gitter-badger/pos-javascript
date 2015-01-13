@@ -1,3 +1,5 @@
+'use strict';
+
 var assert = require('assert');
 var CartItem = require('../app/scripts/cart-item');
 var Item = require('../app/scripts/item');
