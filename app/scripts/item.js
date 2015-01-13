@@ -3,7 +3,6 @@
 var _ = require('lodash');
 
 var Item = (function () {
-    //new Item('ITEM000000', '可口可乐350ml', '瓶', 3.00, '可口可乐'),
     function Item (barcode, name, util, price, brand) {
         this.barcode = barcode;
         this.name = name;
