@@ -3,7 +3,7 @@
 var assert = require('assert');
 var Item = require('../app/scripts/item');
 var CartItem = require('../app/scripts/cart-item');
-var Promotion = require('../app/scripts/promotion');
+var BrandPromotion = require('../app/scripts/brand-promotion');
 
 describe('promotion', function () {
   describe('#getPromotionString()', function () {
@@ -18,7 +18,7 @@ describe('promotion', function () {
         new CartItem(item3, 3)
       ];
 
-      var promotion = new Promotion('可口可乐品牌打折', 0.90, '可口可乐');
+      var promotion = new BrandPromotion('可口可乐品牌打折', 0.90, '可口可乐');
       var str = promotion.getPromotionString(cartItems);
       var expectString = '名称：可口可乐品牌打折，金额：14.00元\n';
       assert.equal(str, expectString);
@@ -37,7 +37,7 @@ describe('promotion', function () {
       new CartItem(item3, 3)
       ];
 
-      var promotion = new Promotion('可口可乐品牌打折', 0.90, '可口可乐');
+      var promotion = new BrandPromotion('可口可乐品牌打折', 0.90, '可口可乐');
       assert.equal(14, promotion.getPromotionMoney(cartItems));
     });
   });
