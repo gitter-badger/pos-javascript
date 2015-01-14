@@ -23,7 +23,7 @@ describe('cart-item', function () {
             findItem.withArgs('ITEM000001').returns(item2);
             findItem.withArgs('ITEM000002').returns(item3);
 
-            cartItems = CartItem.toCartItems(tips);
+            var cartItems = CartItem.toCartItems(tips);
             assert.equal(cartItems[0].item.name, '可口可乐350ml');
             assert.equal(cartItems[0].count, 2);
 
