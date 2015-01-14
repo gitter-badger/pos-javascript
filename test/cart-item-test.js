@@ -42,7 +42,7 @@ describe('cart-item', function () {
       });
     });
 
-    describe('.toString', function () {
+    describe('#toString', function () {
       it('should get correct sting', function () {
         var item = new Item('ITEM000000', '可口可乐350ml', '瓶', 3.00, '可口可乐');
         var cartItem = new CartItem(item, 20);
@@ -50,4 +50,15 @@ describe('cart-item', function () {
         assert.equal(cartItem.toString(), str);
       });
     });
+
+    describe('#getPromotion', function () {
+      // it('get correct brand promotion', function () {
+      //   var item = new Item('ITEM000000', '可口可乐350ml', '瓶', 3.00, '可口可乐');
+      //   var cartItem = new CartItem(item, 20);
+      //   var str = '名称：可口可乐品牌打折，金额：14.00元\n';
+      //   var promotion = cartItem.getPromotion();
+      //
+      //   assert.equal(promotion.getPromotionString(), str);
+      //   assert.equal(promotion.getPrice(), 14.00);
+      });
 });
