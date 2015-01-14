@@ -20,10 +20,11 @@ var BrandPromotion = (function () {
     _.forEach(cartItems, function(cartItem) {
       if(cartItem.item.getBrand() === self.brand) {
         promotionMoney += cartItem.calculateTotal();
-      };
+      }
     });
     return promotionMoney - (promotionMoney * self.discount);
   };
+
 
   return BrandPromotion;
 })();

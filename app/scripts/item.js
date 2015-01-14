@@ -11,8 +11,17 @@ var Item = (function () {
         this.brand = brand || '';
     }
 
-    Item.findItemByBarcode = function (items, barcode) {
-        return _.find(items, {'barcode': barcode});
+    Item.findAllItems = function () {
+      return [
+      new Item('ITEM000000', '可口可乐350ml', '瓶', 3.00, '可口可乐'),
+      new Item('ITEM000001', '可口可乐550ml', '瓶', 4.00, '可口可乐'),
+      new Item('ITEM000002', '雪碧', '瓶', 3.00, '')
+      ];
+    };
+
+    Item.findItemByBarcode = function (barcode) {
+      var items = Item.findAllItems();
+      return _.find(items, {'barcode': barcode});
     };
 
     Item.prototype.getName = function () {
@@ -29,6 +38,10 @@ var Item = (function () {
 
     Item.prototype.getBrand = function () {
       return this.brand;
+    };
+
+    Item.prototype.getBarcode = function () {
+      return this.barcode;
     };
 
     return Item;

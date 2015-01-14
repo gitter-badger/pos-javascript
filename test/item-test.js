@@ -15,7 +15,11 @@ describe('item', function () {
                 new Item('ITEM000001', '可口可乐550ml', '瓶', 4.00, '可口可乐'),
                 new Item('ITEM000002', '雪碧', '瓶', 3.00, '')
             ];
-            var item = Item.findItemByBarcode(items, 'ITEM000000');
+            var sinon = require('sinon');
+            var findItem = sinon.stub(Item, 'findAllItems');
+            findItem.returns(items);
+
+            var item = Item.findItemByBarcode('ITEM000000');
             assert.equal(item.name, '可口可乐350ml');
             assert.equal(item.brand, '可口可乐');
         })
