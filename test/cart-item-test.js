@@ -35,20 +35,20 @@ describe('cart-item', function () {
     });
 
     describe('.getTotal', function () {
-      it('total without promotion', function () {
-        var item = new Item('ITEM000000', '可口可乐350ml', '瓶', 3.00, '可口可乐');
-        var cartItem = new CartItem(item, 3);
-        assert.equal(cartItem.calculateTotal(), 9.00);
-      });
+        it('total without promotion', function () {
+            var item = new Item('ITEM000000', '可口可乐350ml', '瓶', 3.00, '可口可乐');
+            var cartItem = new CartItem(item, 3);
+            assert.equal(cartItem.calculateTotal(), 9.00);
+        });
     });
 
     describe('#toString', function () {
-      it('should get correct sting', function () {
-        var item = new Item('ITEM000000', '可口可乐350ml', '瓶', 3.00, '可口可乐');
-        var cartItem = new CartItem(item, 20);
-        var str = '名称：可口可乐350ml，数量：20瓶，单价：3.00(元)，小计：60.00(元)\n';
-        assert.equal(cartItem.toString(), str);
-      });
+        it('should get correct sting', function () {
+            var item = new Item('ITEM000000', '可口可乐350ml', '瓶', 3.00, '可口可乐');
+            var cartItem = new CartItem(item, 20);
+            var str = '名称：可口可乐350ml，数量：20瓶，单价：3.00(元)，小计：60.00(元)\n';
+            assert.equal(cartItem.toString(), str);
+        });
     });
 
     // describe('#getPromotion', function () {
