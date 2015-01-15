@@ -11,10 +11,6 @@ var SimpleDiscount = (function () {
         return '名称：' + this.buildPromotionName(cartItems) + '，金额：' + promotionMoney.toFixed(2) + '元\n';
     };
 
-    SimpleDiscount.prototype.getPromotionMoney = function () {
-
-    };
-
     SimpleDiscount.prototype.buildPromotionName = function () {
         return this.name;
     };
