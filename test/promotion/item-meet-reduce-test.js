@@ -1,9 +1,9 @@
 'use strict';
 
 var assert = require('assert');
-var Item = require('../app/scripts/item');
-var CartItem = require('../app/scripts/cart-item');
-var ItemMeetReduce = require('../app/scripts/promotion/item-meet-reduce');
+var Item = require('../../app/scripts/item');
+var CartItem = require('../../app/scripts/cart-item');
+var ItemMeetReduce = require('../../app/scripts/promotion/item-meet-reduce');
 
 describe('item-meet-reduce', function () {
     describe('#getPromotionMoney', function () {

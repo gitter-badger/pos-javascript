@@ -1,15 +1,14 @@
 'use strict';
 
 var assert = require('assert');
-var WholeMeetReduce = require('../app/scripts/promotion/whole-meet-reduce');
-var Item = require('../app/scripts/item');
-var CartItem = require('../app/scripts/cart-item');
+var BrandMeetReduce = require('../../app/scripts/promotion/brand-meet-reduce');
+var Item = require('../../app/scripts/item');
+var CartItem = require('../../app/scripts/cart-item');
 
-describe('whole-meet-reduce-test', function () {
+describe('brand-meet-reduce test', function () {
     describe('#getPromotionMoney', function () {
-
         it('item total less than meet should return 0', function () {
-            var wholeMeetReduce = new WholeMeetReduce('可口可乐满100减5', 100, 5, ['ITEM000002']);
+            var brandMeetReduce = new BrandMeetReduce('可口可乐满100减5', 100, 5, '可口可乐');
 
             var item1 = new Item('ITEM000000', '可口可乐350ml', '瓶', 3.00, '可口可乐');
             var item2 = new Item('ITEM000001', '可口可乐550ml', '瓶', 4.00, '可口可乐');
@@ -21,11 +20,11 @@ describe('whole-meet-reduce-test', function () {
                 new CartItem(item3, 30)
             ];
 
-            assert.equal(0, wholeMeetReduce.getPromotionMoney(cartItems));
+            assert.equal(0, brandMeetReduce.getPromotionMoney(cartItems));
         });
 
         it('item total more than meet should return reduce', function () {
-            var wholeMeetReduce = new WholeMeetReduce('可口可乐满100减5', 100, 5, ['ITEM000002']);
+            var brandMeetReduce = new BrandMeetReduce('可口可乐满100减5', 100, 5, '可口可乐');
 
             var item1 = new Item('ITEM000000', '可口可乐350ml', '瓶', 3.00, '可口可乐');
             var item2 = new Item('ITEM000001', '可口可乐550ml', '瓶', 4.00, '可口可乐');
@@ -37,11 +36,11 @@ describe('whole-meet-reduce-test', function () {
                 new CartItem(item3, 30)
             ];
 
-            assert.equal(5, wholeMeetReduce.getPromotionMoney(cartItems));
+            assert.equal(5, brandMeetReduce.getPromotionMoney(cartItems));
         });
 
         it('item total equal than meet should return reduce', function () {
-            var wholeMeetReduce = new WholeMeetReduce('可口可乐满100减5', 100, 5, '可口可乐');
+            var brandMeetReduce = new BrandMeetReduce('可口可乐满100减5', 100, 5, '可口可乐');
 
             var item1 = new Item('ITEM000000', '可口可乐350ml', '瓶', 3.00, '可口可乐');
             var item2 = new Item('ITEM000001', '可口可乐550ml', '瓶', 4.00, '可口可乐');
@@ -53,7 +52,7 @@ describe('whole-meet-reduce-test', function () {
                 new CartItem(item3, 30)
             ];
 
-            assert.equal(5, wholeMeetReduce.getPromotionMoney(cartItems));
+            assert.equal(5, brandMeetReduce.getPromotionMoney(cartItems));
         });
     });
 });
