@@ -2,20 +2,19 @@
 
 var _ = require('lodash');
 var Item = require('./item');
+var SimpleDiscount = require('./promotion/simple-discount');
 
 var ItemPromotion = (function () {
     function ItemPromotion(barcode, discount) {
+        SimpleDiscount.call(this, '', discount);
         this.barcode = barcode;
-        this.discount = discount;
     }
 
-    ItemPromotion.prototype.getPromotionString = function (cartItem) {
-        var promotionMoney = this.getPromotionMoney(cartItem);
-        return '名称：' + this.buildPromotionName(cartItem.item.getBarcode()) + '，金额：' + promotionMoney.toFixed(2) + '元\n';
-    };
+    ItemPromotion.prototype = Object.create(SimpleDiscount.prototype);
+    ItemPromotion.prototype.constructor = ItemPromotion;
 
-    ItemPromotion.prototype.buildPromotionName = function (barcode) {
-        var itemName = Item.findItemByBarcode(barcode).getName();
+    ItemPromotion.prototype.buildPromotionName = function (cartItem) {
+        var itemName = Item.findItemByBarcode(cartItem.item.getBarcode()).getName();
         return itemName + '单品打折';
     };
 
