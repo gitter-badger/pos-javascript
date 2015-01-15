@@ -1,7 +1,7 @@
 'use strict';
 
 var assert = require('assert');
-var WholeMeetReduce = require('../app/scripts/whole-meet-reduce');
+var WholeMeetReduce = require('../app/scripts/promotion/whole-meet-reduce');
 var Item = require('../app/scripts/item');
 var CartItem = require('../app/scripts/cart-item');
 

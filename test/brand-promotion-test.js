@@ -3,7 +3,7 @@
 var assert = require('assert');
 var Item = require('../app/scripts/item');
 var CartItem = require('../app/scripts/cart-item');
-var BrandPromotion = require('../app/scripts/brand-promotion');
+var BrandPromotion = require('../app/scripts/promotion/brand-promotion');
 
 describe('promotion', function () {
     describe('#getPromotionString()', function () {

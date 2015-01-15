@@ -1,6 +1,6 @@
 'use strict';
 
-var SimpleMeetReduce = require('./promotion/simple-meet-reduce');
+var SimpleMeetReduce = require('./simple-meet-reduce');
 
 var ItemMeetReduce = (function () {
 

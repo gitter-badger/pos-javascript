@@ -3,7 +3,7 @@
 var assert = require('assert');
 var Item = require('../app/scripts/item');
 var CartItem = require('../app/scripts/cart-item');
-var WholeDiscount = require('../app/scripts/whole-promotion');
+var WholeDiscount = require('../app/scripts/promotion/whole-promotion');
 
 
 describe('whole promotion test', function () {

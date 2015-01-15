@@ -1,7 +1,7 @@
 'use strict';
 
 var _ = require('lodash');
-var SimpleMeetReduce = require('./promotion/simple-meet-reduce');
+var SimpleMeetReduce = require('./simple-meet-reduce');
 
 var BrandMeetReduce = (function () {
     function BrandMeetReduce(name, meet, reduce, brand) {

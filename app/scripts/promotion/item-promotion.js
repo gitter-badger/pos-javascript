@@ -1,8 +1,8 @@
 'use strict';
 
 var _ = require('lodash');
-var Item = require('./item');
-var SimpleDiscount = require('./promotion/simple-discount');
+var Item = require('./../item');
+var SimpleDiscount = require('./simple-discount');
 
 var ItemPromotion = (function () {
     function ItemPromotion(barcode, discount) {

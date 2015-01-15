@@ -1,7 +1,7 @@
 'use strict';
 
 var assert = require('assert');
-var BrandMeetReduce = require('../app/scripts/brand-meet-reduce');
+var BrandMeetReduce = require('../app/scripts/promotion/brand-meet-reduce');
 var Item = require('../app/scripts/item');
 var CartItem = require('../app/scripts/cart-item');
 
