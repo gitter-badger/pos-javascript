@@ -40,9 +40,7 @@ describe('whole promotion test', function () {
                 new CartItem(item2, 20),
                 new CartItem(item3, 30)
             ];
-            var barcodes = [
-                'ITEM000001'
-            ];
+            var barcodes = ['ITEM000001'];
 
             var promotion = new WholeDiscount('九折', 0.9, barcodes);
             assert.equal(15, promotion.getPromotionMoney(cartItems));
