@@ -10,7 +10,6 @@ var WholeDiscount = (function () {
 
     WholeDiscount.prototype.getPromotionString = function (cartItems) {
         var promotionMoney = this.getPromotionMoney(cartItems);
-        console.log(promotionMoney);
         return '名称：' + this.name + '，金额：' + promotionMoney.toFixed(2) + '元\n';
     };
 

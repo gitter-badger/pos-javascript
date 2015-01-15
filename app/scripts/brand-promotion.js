@@ -1,18 +1,16 @@
 'use strict';
 var _ = require('lodash');
+var SimpleDiscount = require('./promotion/simple-discount');
 
 var BrandPromotion = (function () {
 
     function BrandPromotion(name, discount, brand) {
-        this.name = name;
-        this.discount = discount;
+        SimpleDiscount.call(this, name, discount);
         this.brand = brand;
     }
 
-    BrandPromotion.prototype.getPromotionString = function (cartItems) {
-        var promotionMoney = this.getPromotionMoney(cartItems);
-        return '名称：' + this.name + '，金额：' + promotionMoney.toFixed(2) + '元\n';
-    };
+    BrandPromotion.prototype = Object.create(SimpleDiscount.prototype);
+    BrandPromotion.prototype.constructor = BrandPromotion;
 
     BrandPromotion.prototype.getPromotionMoney = function (cartItems) {
         var promotionMoney = 0.00;
