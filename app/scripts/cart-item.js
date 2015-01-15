@@ -1,6 +1,7 @@
 'use strict';
+
 var _ = require('lodash');
-var Item = require('./item')
+var Item = require('./item');
 
 var CartItem = (function () {
     function CartItem(item, count) {

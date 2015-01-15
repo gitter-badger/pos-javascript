@@ -1,4 +1,4 @@
-'ues strict';
+'use strict';
 
 var SimpleDiscount = (function () {
     function SimpleDiscount(name, discount) {

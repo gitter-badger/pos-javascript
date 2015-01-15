@@ -1,4 +1,5 @@
 'use strict';
+
 var _ = require('lodash');
 var SimpleDiscount = require('./promotion/simple-discount');
 
@@ -22,7 +23,6 @@ var BrandPromotion = (function () {
         });
         return promotionMoney - (promotionMoney * self.discount);
     };
-
 
     return BrandPromotion;
 })();
