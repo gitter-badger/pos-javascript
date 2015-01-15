@@ -21,7 +21,6 @@ var WholeDiscount = (function () {
             }
 
         });
-        console.log(promotionMoney);
         return promotionMoney - (promotionMoney * self.discount);
     };
 
