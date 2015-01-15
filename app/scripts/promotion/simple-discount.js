@@ -1,15 +1,12 @@
 'use strict';
-
+var Promotion = require('./promotion');
 var SimpleDiscount = (function () {
     function SimpleDiscount(name, discount) {
         this.name = name || '';
         this.discount = discount || 1;
     }
-
-    SimpleDiscount.prototype.getPromotionString = function (cartItems) {
-        var promotionMoney = this.getPromotionMoney(cartItems);
-        return '名称：' + this.buildPromotionName(cartItems) + '，金额：' + promotionMoney.toFixed(2) + '元\n';
-    };
+    SimpleDiscount.prototype = Object.create(Promotion.prototype);
+    SimpleDiscount.prototype.constructor = SimpleDiscount;
 
     SimpleDiscount.prototype.buildPromotionName = function () {
         return this.name;
