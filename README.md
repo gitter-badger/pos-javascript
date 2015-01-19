@@ -29,6 +29,8 @@ var allItems = [
 
 
 ### 打折优惠
+
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/sighWang/pos-javascript?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 有三种类型的打折：
 
 * 单品打折，比如
